@@ -1,0 +1,252 @@
+library(dplyr)
+library(readr)
+library(tidyverse)
+library(readxl)
+
+x2005 <- read_csv("//storage/GROUPS/DASIL/Kuiper/NYPD/2005.csv",
+                  na = "empty", col_types = cols(arstoffn = col_skip(), officrid = col_skip(), 
+                                   offunif = col_skip(), ser_num = col_skip(), sumoffen = col_skip(),
+                                   repcmd = col_skip(), revcmd = col_skip(), offverb = col_skip(), 
+                                   offshld = col_skip(), compyear = col_skip(), comppct = col_skip(),
+                                   dob = col_skip(), ht_feet = col_number(), linecm = col_skip(),
+                                   radio = col_skip(), rf_rfcmp = col_skip(), rf_verbl = col_skip(),
+                                   sb_hdobj = col_skip(), sb_outln = col_skip(), sb_admis = col_skip(),
+                                   sb_other = col_skip(), datestop = col_number()))
+#dat <- full_join(dat, x2005)
+x2006 <- read_csv("//storage/GROUPS/DASIL/Kuiper/NYPD/2006.csv",
+                  na = "empty", col_types = cols(arstoffn = col_skip(), officrid = col_skip(), offunif = col_skip(),
+                                                 ser_num = col_skip(), sumoffen = col_skip(), repcmd = col_skip(),
+                                                 revcmd = col_skip(),  offverb = col_skip(), offshld = col_skip(), 
+                                                 compyear = col_skip(), comppct = col_skip(), dob = col_skip(),
+                                                 ht_feet = col_number(), linecm = col_skip(), radio = col_skip(), rf_rfcmp = col_skip(), rf_verbl = col_skip(),
+                                                 sb_hdobj = col_skip(), sb_outln = col_skip(), sb_admis = col_skip(),
+                                                 sb_other = col_skip(), datestop = col_number(), pct = col_number(), 
+                                                 age = col_number(), weight = col_number(), perobs = col_number(), 
+                                                 perstop = col_number()))
+dat <- full_join(x2005, x2006)
+x2007 <- read_csv("//storage/GROUPS/DASIL/Kuiper/NYPD/2007.csv",
+                  na = "empty", col_types = cols(arstoffn = col_skip(), officrid = col_skip(), offunif = col_skip(),
+                                                 ser_num = col_skip(), sumoffen = col_skip(), repcmd = col_skip(),
+                                                 revcmd = col_skip(),  offverb = col_skip(), offshld = col_skip(),
+                                                 compyear = col_skip(), comppct = col_skip(), dob = col_skip(), 
+                                                 ht_feet = col_number(), addrpct = col_number(), linecm = col_skip(),
+                                                 radio = col_skip(), rf_rfcmp = col_skip(), rf_verbl = col_skip(),
+                                                 sb_hdobj = col_skip(), sb_outln = col_skip(), sb_admis = col_skip(),
+                                                 sb_other = col_skip(), datestop = col_number(), pct = col_number(),
+                                                 age = col_number(), weight = col_number(), ht_inch = col_number(), 
+                                                 detailcm = col_number()))
+dat <- full_join(dat, x2007)
+x2008 <- read_csv("//storage/GROUPS/DASIL/Kuiper/NYPD/2008.csv",
+                  na = "empty", col_types = cols(arstoffn = col_skip(), officrid = col_skip(), offunif = col_skip(), 
+                                                 ser_num = col_skip(), sumoffen = col_skip(), repcmd = col_skip(),
+                                                 revcmd = col_skip(), offverb = col_skip(), offshld = col_skip(),
+                                                 compyear = col_skip(), comppct = col_skip(), dob = col_skip(),
+                                                 ht_feet = col_number(), addrpct = col_number(), linecm = col_skip(),
+                                                 radio = col_skip(), rf_rfcmp = col_skip(), rf_verbl = col_skip(),
+                                                 sb_hdobj = col_skip(), sb_outln = col_skip(), sb_admis = col_skip(),
+                                                 sb_other = col_skip(), datestop = col_number(), pct = col_number(), age = col_number(), weight = col_number(),
+                                                 ht_inch = col_number(), detailcm = col_number()))
+dat <- full_join(dat, x2008)
+x2009 <- read_csv("//storage/GROUPS/DASIL/Kuiper/NYPD/2009.csv",
+                  na = "empty", col_types = cols(arstoffn = col_skip(),  officrid = col_skip(), offunif = col_skip(),
+                                                 ser_num = col_skip(), sumoffen = col_skip(), repcmd = col_skip(), 
+                                                 revcmd = col_skip(), offverb = col_skip(), offshld = col_skip(), 
+                                                 compyear = col_skip(), comppct = col_skip(), dob = col_skip(), 
+                                                 ht_feet = col_number(), addrpct = col_number(), linecm = col_skip(),
+                                                 radio = col_skip(), rf_rfcmp = col_skip(), rf_verbl = col_skip(),
+                                                 sb_hdobj = col_skip(), sb_outln = col_skip(), sb_admis = col_skip(),
+                                                 sb_other = col_skip(), datestop = col_number(), pct = col_number(),
+                                                 age = col_number(), weight = col_number(), ht_inch = col_number(), detailcm = col_number()))
+dat <- full_join(dat, x2009)
+x2010 <- read_csv("//storage/GROUPS/DASIL/Kuiper/NYPD/2010.csv",
+                  na = "empty", col_types = cols(arstoffn = col_skip(), officrid = col_skip(), offunif = col_skip(),
+                                                 ser_num = col_skip(), sumoffen = col_skip(), repcmd = col_skip(), 
+                                                 revcmd = col_skip(), offverb = col_skip(), offshld = col_skip(), 
+                                                 compyear = col_skip(), comppct = col_skip(), dob = col_skip(), 
+                                                 ht_feet = col_number(), addrpct = col_number(), linecm = col_skip(),
+                                                 radio = col_skip(), rf_rfcmp = col_skip(), rf_verbl = col_skip(),
+                                                 sb_hdobj = col_skip(), sb_outln = col_skip(), sb_admis = col_skip(),
+                                                 sb_other = col_skip(), datestop = col_number(), pct = col_number(), 
+                                                 age = col_number(), weight = col_number(), ht_inch = col_number(), 
+                                                 detailcm = col_number(), timestop = col_character()))
+dat <- full_join(dat, x2010)
+x2011 <- read_csv("//storage/GROUPS/DASIL/Kuiper/NYPD/2011.csv",
+                  na = "empty", col_types = cols(arstoffn = col_skip(), officrid = col_skip(), offunif = col_skip(), 
+                                                 ser_num = col_skip(), sumoffen = col_skip(), repcmd = col_skip(), 
+                                                 revcmd = col_skip(), offverb = col_skip(), offshld = col_skip(),
+                                                 compyear = col_skip(), comppct = col_skip(), dob = col_skip(), 
+                                                 ht_feet = col_number(), addrpct = col_number(), linecm = col_skip(),
+                                                 radio = col_skip(), rf_rfcmp = col_skip(), rf_verbl = col_skip(),
+                                                 sb_hdobj = col_skip(), sb_outln = col_skip(), sb_admis = col_skip(),
+                                                 sb_other = col_skip(), datestop = col_number(), pct = col_number(), 
+                                                 age = col_number(), weight = col_number(), ht_inch = col_number(), 
+                                                 detailcm = col_number(), timestop = col_character()))
+dat <- full_join(dat, x2011)
+x2012 <- read_csv("//storage/GROUPS/DASIL/Kuiper/NYPD/2012.csv",
+                  na = "empty", col_types = cols(arstoffn = col_skip(), officrid = col_skip(), offunif = col_skip(), 
+                                                 ser_num = col_skip(), sumoffen = col_skip(), repcmd = col_skip(), 
+                                                 revcmd = col_skip(), offverb = col_skip(), offshld = col_skip(), 
+                                                 compyear = col_skip(), comppct = col_skip(), dob = col_skip(), 
+                                                 ht_feet = col_number(), addrpct = col_number(), linecm = col_skip(),
+                                                 radio = col_skip(), rf_rfcmp = col_skip(), rf_verbl = col_skip(),
+                                                 sb_hdobj = col_skip(), sb_outln = col_skip(), sb_admis = col_skip(),
+                                                 sb_other = col_skip(), datestop = col_number(), pct = col_number(), 
+                                                 age = col_number(), weight = col_number(), ht_inch = col_number(), 
+                                                 detailcm = col_number(), timestop = col_character()))
+dat <- full_join(dat, x2012)
+x2013 <- read_csv("//storage/GROUPS/DASIL/Kuiper/NYPD/2013.csv",
+                  na = "empty", col_types = cols(arstoffn = col_skip(), officrid = col_skip(), offunif = col_skip(), 
+                                                 ser_num = col_skip(), sumoffen = col_skip(), repcmd = col_skip(), 
+                                                 revcmd = col_skip(), offverb = col_skip(), offshld = col_skip(), 
+                                                 compyear = col_skip(), comppct = col_skip(), dob = col_skip(), 
+                                                 ht_feet = col_number(), addrpct = col_number(), lineCM = col_skip(),
+                                                 radio = col_skip(), rf_rfcmp = col_skip(), rf_verbl = col_skip(),
+                                                 sb_hdobj = col_skip(), sb_outln = col_skip(), sb_admis = col_skip(),
+                                                 sb_other = col_skip(), datestop = col_number(), pct = col_number(), 
+                                                 age = col_number(), weight = col_number(), ht_inch = col_number(), 
+                                                 detailcm = col_number(), timestop = col_character(), perstop = col_number()))
+x2013 <- rename(x2013, detailcm = detailCM)
+dat <- full_join(dat, x2013)
+x2014 <- read_csv("//storage/GROUPS/DASIL/Kuiper/NYPD/2014.csv",
+                  na = "empty", col_types = cols(arstoffn = col_skip(), officrid = col_skip(), offunif = col_skip(), 
+                                                ser_num = col_skip(), sumoffen = col_skip(), repcmd = col_skip(), 
+                                                revcmd = col_skip(), offverb = col_skip(), offshld = col_skip(), 
+                                                compyear = col_skip(), comppct = col_skip(), dob = col_skip(), 
+                                                ht_feet = col_number(), addrpct = col_number(), lineCM = col_skip(),
+                                                radio = col_skip(), rf_rfcmp = col_skip(), rf_verbl = col_skip(),
+                                                sb_hdobj = col_skip(), sb_outln = col_skip(), sb_admis = col_skip(),
+                                                sb_other = col_skip(), datestop = col_number(), pct = col_number(), 
+                                                age = col_number(), weight = col_number(), ht_inch = col_number(), 
+                                                timestop = col_character()))
+x2014 <- rename(x2014, detailcm = detailCM)
+dat <- full_join(dat, x2014)
+x2015 <- read_csv("//storage/GROUPS/DASIL/Kuiper/NYPD/2015.csv",
+                  na = "empty", col_types = cols(arstoffn = col_skip(), officrid = col_skip(), offunif = col_skip(), 
+                                                 ser_num = col_skip(), sumoffen = col_skip(), repcmd = col_skip(), 
+                                                 revcmd = col_skip(), offverb = col_skip(), offshld = col_skip(), 
+                                                 compyear = col_skip(), comppct = col_skip(), dob = col_skip(), 
+                                                 ht_feet = col_number(), addrpct = col_number(), lineCM = col_skip(),
+                                                 radio = col_skip(), rf_rfcmp = col_skip(), rf_verbl = col_skip(),
+                                                 sb_hdobj = col_skip(), sb_outln = col_skip(), sb_admis = col_skip(),
+                                                 sb_other = col_skip(), datestop = col_number(), pct = col_number(), 
+                                                 age = col_number(), weight = col_number(), ht_inch = col_number(), 
+                                                 timestop = col_character(), perstop = col_number()))
+x2015 <- rename(x2015, detailcm = detailCM)
+dat <- full_join(dat, x2015)
+x2016 <- read_csv("//storage/GROUPS/DASIL/Kuiper/NYPD/2016.csv",
+                  na = "empty", col_types = cols(arstoffn = col_skip(), officrid = col_skip(), offunif = col_skip(), 
+                                                 ser_num = col_skip(), sumoffen = col_skip(), repcmd = col_skip(), 
+                                                 revcmd = col_skip(), offverb = col_skip(), offshld = col_skip(), 
+                                                 compyear = col_skip(), comppct = col_skip(), dob = col_skip(), 
+                                                 ht_feet = col_number(), addrpct = col_number(), lineCM = col_skip(),
+                                                 radio = col_skip(), rf_rfcmp = col_skip(), rf_verbl = col_skip(),
+                                                 sb_hdobj = col_skip(), sb_outln = col_skip(), sb_admis = col_skip(),
+                                                 sb_other = col_skip(), datestop = col_number(), pct = col_number(), 
+                                                 age = col_number(), weight = col_number(), ht_inch = col_number(), 
+                                                 timestop = col_character(), perstop = col_number()))
+x2016 <- rename(x2016, detailcm = detailCM)
+dat <- full_join(dat, x2016)
+dat1 <- dat
+dat <- select(dat, pct, inout, perobs, perstop, typeofid, recstat, datestop, timestop, explnstp, othpers, arstmade, sumissue, frisked, searched, contrabn, pistol, riflshot, asltweap, knifcuti, machgun, othrweap,
+              pf_hands, pf_wall, pf_grnd, pf_drwep, pf_ptwep, pf_baton, pf_hcuff, pf_pepsp, pf_other, ac_rept, ac_inves, ac_stsnd, cs_objcs, cs_descr, cs_casng, cs_lkout, ac_other,
+              cs_drgtr, cs_furtv, cs_vcrim, cs_bulge, cs_other, rf_knowl, sex, race, age, ht_inch, ht_feet, weight, haircolr, eyecolor, build, othfeatr, addrpct, xcoord, ycoord, detailcm, year)
+              
+x2017 <- read_csv("//storage/GROUPS/DASIL/Kuiper/NYPD/2017.csv")
+x2018 <- read_csv("//storage/GROUPS/DASIL/Kuiper/NYPD/2018.csv")
+x2018$SUSPECT_HEIGHT <- as.numeric(x2018$SUSPECT_HEIGHT)
+dat2 <- full_join(x2017, x2018)
+dat2 <- select(dat2, 2, 3, 8, 14, 15, 17:20, 22, 23, 25, 31:61, 64:73, 79, 80, 4)
+dat$FIREARM_FLAG <- ifelse(dat$pistol =="1" |dat$pistol =="Y"| dat$riflshot=="1" | dat$riflshot=="Y" | dat$asltweap=="1" | dat$asltweap== "Y" | dat$machgun== "Y" , 1, 
+                           (ifelse(dat$pistol =="N"| dat$riflshot=="N" | dat$asltweap== "N" | dat$machgun== "N", 0, NA)))
+dat$PHYSICAL_FORCE_DRAW_POINT_FIREARM_FLAG <- ifelse(dat$pf_drwep == "Y" | dat$pf_drwep == "1" | dat$pf_ptwep == "Y" | dat$pf_ptwep == "1", 1, 0)
+dat$PHYSICAL_FORCE_OTHER_FLAG <- ifelse(dat$pf_hands =="1" |dat$pf_hands =="Y"| dat$pf_wall=="1" | dat$pf_wall=="Y" | dat$pf_grnd=="1" | dat$pf_grnd== "Y" | dat$pf_other== "1" | dat$pf_other== "Y" , 1, 
+                                        (ifelse(dat$pf_hands =="N"| dat$pf_wall=="N" | dat$pf_grnd== "N" | dat$pf_other== "N", 0, NA)))
+dat$CIRCUMSTANCES_SURVEILLANCE <- ifelse(dat$ac_inves =="1" |dat$ac_inves =="Y"| dat$cs_casng=="1" | dat$cs_casng=="Y" | dat$cs_lkout=="1" | dat$cs_lkout== "Y" | dat$ac_stsnd== "1" | dat$ac_stsnd== "Y" |
+                                         dat$cs_furtv == "1" | dat$cs_furtv == "Y" | dat$cs_bulge == "1" | dat$cs_bulge == "Y", 1, 
+                                         (ifelse(dat$ac_inves =="N"| dat$cs_casng=="N" | dat$cs_lkout== "N" | dat$ac_stsnd== "N" | dat$cs_furtv == "N" | dat$cs_bulge == "N", 0, NA)))
+dat$SUSPECTS_ACTIONS_OTHER_FLAG <- ifelse(dat$cs_other == "1" | dat$cs_other == "Y" | dat$ac_other == "1" | dat$ac_other == "Y" | dat$ac_rept == "1" | dat$ac_rept == "Y", 1,
+                                  ifelse(dat$cs_other == "N" | dat$ac_other == "N" | dat$ac_rept == "N", 0, NA))
+dat$SUSPECT_HEIGHT <- dat$ht_feet*12 + dat$ht_inch
+dat <- select(dat, -5, -16:-18, -20, -22:-26, -30:-33, -36:-38, -40, -42, -43)
+dat <- select(dat, -1, -24, -28, -29)
+colnames(dat) <- c("LOCATION_IN_OUT_CODE", "OBSERVED_DURATION_MINUTES", "STOP_DURATION_MINUTES", "RECORD_STATUS_CODE", "STOP_FRISK_DATE1", "STOP_FRISK_TIME1", "OFFICER_EXPLAINED_STOP_FLAG", "OTHER_PERSON_STOPPED_FLAG",
+                   "SUSPECT_ARRESTED_FLAG", "SUMMONS_ISSUED_FLAG", "FRISKED_FLAG", "SEARCHED_FLAG", "OTHER_CONTRABAND_FLAG", "KNIFE_CUTTER_FLAG", "OTHER_WEAPON_FLAG", "PHYSICAL_FORCE_WEAPON_IMPACT_FLAG", "PHYSICAL_FORCE_HANDCUFF_SUSPECT_FLAG", 
+                   "PHYSICAL_FORCE_OC_SPRAY_USED_FLAG", "CIRCUMSTANCES_WEAPON", "SUSPECTS_ACTIONS_DECRIPTION_FLAG", "SUSPECTS_ACTIONS_DRUG_TRANSACTIONS_FLAG", "BACKGROUND_CIRCUMSTANCES_VIOLENT_CRIME_FLAG", "SUSPECT_SEX", 
+                   "SUSPECT_RACE_DESCRIPTION", "SUSPECT_REPORTED_AGE", "SUSPECT_WEIGHT", "SUSPECT_HAIR_COLOR",
+                   "SUSPECT_EYE_COLOR", "SUSPECT_BODY_BUILD_TYPE", "SUSPECT_OTHER_DESCRIPTION", "STOP_LOCATION_PRECINCT", "STOP_LOCATION_X", "STOP_LOCATION_Y", "SUSPECTED_CRIME_DESCRIPTION", 'YEAR2', 'FIREARM_FLAG', 'PHYSICAL_FORCE_DRAW_POINT_FIREARM_FLAG',
+                   'PHYSICAL_FORCE_OTHER_FLAG',	'CIRCUMSTANCES_SURVEILLANCE', 'SUSPECTS_ACTIONS_OTHER_FLAG', 'SUSPECT_HEIGHT')
+dat2$CIRCUMSTANCES_SURVEILLANCE <- ifelse(dat2$SUSPECTS_ACTIONS_IDENTIFY_CRIME_PATTERN_FLAG == "Y" | dat2$SUSPECTS_ACTIONS_CASING_FLAG == "Y" | dat2$SUSPECTS_ACTIONS_LOOKOUT_FLAG == "Y", 1, 0)
+dat2$CIRCUMSTANCES_WEAPON <- ifelse(dat2$SUSPECTS_ACTIONS_CONCEALED_POSSESSION_WEAPON_FLAG == "Y" | dat2$BACKROUND_CIRCUMSTANCES_SUSPECT_KNOWN_TO_CARRY_WEAPON_FLAG == "Y", 1, 0)
+dat2$OTHER_WEAPON_FLAG <- ifelse(dat2$OTHER_WEAPON_FLAG == "Y" | dat2$WEAPON_FOUND_FLAG == "Y", 1, 0)
+dat2$PHYSICAL_FORCE_OTHER_FLAG <- ifelse(dat2$PHYSICAL_FORCE_OTHER_FLAG == "Y" | (dat2$PHYSICAL_FORCE_RESTRAINT_USED_FLAG == 1 & 
+                                                                                    !(dat2$PHYSICAL_FORCE_DRAW_POINT_FIREARM_FLAG == "Y" | dat2$PHYSICAL_FORCE_WEAPON_IMPACT_FLAG == "Y" |
+                                                                                      dat2$PHYSICAL_FORCE_HANDCUFF_SUSPECT_FLAG == "Y" | dat2$PHYSICAL_FORCE_OC_SPRAY_USED_FLAG == "Y" |
+                                                                                      dat2$PHYSICAL_FORCE_VERBAL_INSTRUCTION_FLAG == "Y")), 1, 0)
+dat2 <- select(dat2, -19, -25, -30, -34, -35)
+dat2 <- select(dat2, -5, -27, -28, -34:-38)
+
+dat$OTHER_WEAPON_FLAG <- ifelse(dat$OTHER_WEAPON_FLAG == "1" | dat$OTHER_WEAPON_FLAG == "Y", 1, 0)
+dat$CIRCUMSTANCES_WEAPON <- ifelse(dat$CIRCUMSTANCES_WEAPON == "1" | dat$CIRCUMSTANCES_WEAPON == "Y", 1, 0)
+dat2$SUSPECT_REPORTED_AGE <- as.numeric(dat2$SUSPECT_REPORTED_AGE)
+dat2$SUSPECT_WEIGHT <- as.numeric(dat2$SUSPECT_WEIGHT)
+dat$STOP_LOCATION_X <- as.numeric(dat$STOP_LOCATION_X)
+dat$STOP_LOCATION_Y <- as.numeric(dat$STOP_LOCATION_Y)
+dat2$FIREARM_FLAG <- ifelse(dat2$FIREARM_FLAG == "Y", 1, 0)
+dat2$PHYSICAL_FORCE_DRAW_POINT_FIREARM_FLAG <- ifelse(dat2$PHYSICAL_FORCE_DRAW_POINT_FIREARM_FLAG == "Y", 1, 0)
+dat2$SUSPECTS_ACTIONS_OTHER_FLAG <- ifelse(dat2$SUSPECTS_ACTIONS_OTHER_FLAG == "Y", 1, 0)
+
+
+Crime_Description <- read_excel("//storage/GROUPS/DASIL/Kuiper/NYPD/Crime Description_Final.xlsx", col_types = c("numeric", "text", "skip", "text", "text"))
+names(Crime_Description) <- c("DetailCM", "Description", "CRIME_DESCRIPTION_SPECIFIC", "CRIME_DESCRIPTION_GENERAL")
+dat <- left_join(dat, Crime_Description, by = c("SUSPECTED_CRIME_DESCRIPTION" = "DetailCM"))
+dat <- select(dat, -SUSPECTED_CRIME_DESCRIPTION, -Description)
+dat2 <- left_join(dat2, Crime_Description, by = c("SUSPECTED_CRIME_DESCRIPTION" = "Description"))
+dat2 <- select(dat2, -SUSPECTED_CRIME_DESCRIPTION, -DetailCM)
+nypd_dat <- full_join(dat, dat2)
+
+nypd_dat$LOCATION_IN_OUT_CODE <- ifelse(nypd_dat$LOCATION_IN_OUT_CODE == 'I', 1, 
+                                    ifelse(nypd_dat$LOCATION_IN_OUT_CODE == 'O', 0, NA))
+nypd_dat$FRISKED_FLAG <- ifelse(nypd_dat$FRISKED_FLAG == 'Y', 1, 
+                            ifelse(nypd_dat$FRISKED_FLAG == 'N', 0, NA))
+nypd_dat$SEARCHED_FLAG <- ifelse(nypd_dat$SEARCHED_FLAG == 'Y', 1, 
+                             ifelse(nypd_dat$SEARCHED_FLAG == 'N', 0, NA))
+nypd_dat$SUMMONS_ISSUED_FLAG <- ifelse(nypd_dat$SUMMONS_ISSUED_FLAG == 'Y' | nypd_dat$SUMMONS_ISSUED_FLAG == '1', 1, 
+                                   ifelse(nypd_dat$SUMMONS_ISSUED_FLAG == 'N', 0, NA))
+nypd_dat$KNIFE_CUTTER_FLAG <- ifelse(nypd_dat$KNIFE_CUTTER_FLAG == 'Y' | nypd_dat$KNIFE_CUTTER_FLAG == '1', 1, 
+                                 ifelse(nypd_dat$KNIFE_CUTTER_FLAG == 'N', 0, NA))
+nypd_dat$SUSPECTS_ACTIONS_DRUG_TRANSACTIONS_FLAG <- ifelse(nypd_dat$SUSPECTS_ACTIONS_DRUG_TRANSACTIONS_FLAG == 'Y' | nypd_dat$SUSPECTS_ACTIONS_DRUG_TRANSACTIONS_FLAG == '1', 1, 
+                                                       ifelse(nypd_dat$SUSPECTS_ACTIONS_DRUG_TRANSACTIONS_FLAG == 'N', 0, NA))
+nypd_dat$PHYSICAL_FORCE_WEAPON_IMPACT_FLAG <- ifelse(nypd_dat$PHYSICAL_FORCE_WEAPON_IMPACT_FLAG == 'Y' | nypd_dat$PHYSICAL_FORCE_WEAPON_IMPACT_FLAG == '1', 1, 
+                                                 ifelse(nypd_dat$PHYSICAL_FORCE_WEAPON_IMPACT_FLAG == 'N', 0, NA))
+nypd_dat$PHYSICAL_FORCE_HANDCUFF_SUSPECT_FLAG <- ifelse(nypd_dat$PHYSICAL_FORCE_HANDCUFF_SUSPECT_FLAG == 'Y' | nypd_dat$PHYSICAL_FORCE_HANDCUFF_SUSPECT_FLAG == '1', 1, 
+                                                    ifelse(nypd_dat$PHYSICAL_FORCE_HANDCUFF_SUSPECT_FLAG == 'N', 0, NA))
+nypd_dat$PHYSICAL_FORCE_OC_SPRAY_USED_FLAG <- ifelse(nypd_dat$PHYSICAL_FORCE_OC_SPRAY_USED_FLAG == 'Y' | nypd_dat$PHYSICAL_FORCE_OC_SPRAY_USED_FLAG == '1', 1, 
+                                                        ifelse(nypd_dat$PHYSICAL_FORCE_OC_SPRAY_USED_FLAG == 'N', 0, NA))
+nypd_dat$BACKGROUND_CIRCUMSTANCES_VIOLENT_CRIME_FLAG <- ifelse(nypd_dat$BACKGROUND_CIRCUMSTANCES_VIOLENT_CRIME_FLAG == 'Y' | nypd_dat$BACKGROUND_CIRCUMSTANCES_VIOLENT_CRIME_FLAG == '1', 1, 
+                                                           ifelse(nypd_dat$BACKGROUND_CIRCUMSTANCES_VIOLENT_CRIME_FLAG == 'N', 0, NA))
+nypd_dat$SUSPECT_ARRESTED_FLAG <- ifelse(nypd_dat$SUSPECT_ARRESTED_FLAG == 'Y' | nypd_dat$SUSPECT_ARRESTED_FLAG == '1', 1, 
+                                     ifelse(nypd_dat$SUSPECT_ARRESTED_FLAG == 'N', 0, NA))
+nypd_dat$OTHER_CONTRABAND_FLAG <- ifelse(nypd_dat$OTHER_CONTRABAND_FLAG == 'Y' | nypd_dat$OTHER_CONTRABAND_FLAG == '1', 1, 
+                                     ifelse(nypd_dat$OTHER_CONTRABAND_FLAG == 'N', 0, NA))
+nypd_dat$SUSPECT_SEX <- ifelse(nypd_dat$SUSPECT_SEX == 'F' | nypd_dat$SUSPECT_SEX == 'FEMALE', 'F',
+                           ifelse(nypd_dat$SUSPECT_SEX == 'M' | nypd_dat$SUSPECT_SEX == 'MALE', 'M',
+                                  ifelse(nypd_dat$SUSPECT_SEX == 'Z', 'Z', NA)))
+nypd_dat$SUSPECT_RACE_DESCRIPTION <- as.character(nypd_dat$SUSPECT_RACE_DESCRIPTION)
+nypd_dat$SUSPECT_RACE_DESCRIPTION <- ifelse(nypd_dat$SUSPECT_RACE_DESCRIPTION == "A" | nypd_dat$SUSPECT_RACE_DESCRIPTION == "ASIAN / PACIFIC ISLANDER" |
+                                              nypd_dat$SUSPECT_RACE_DESCRIPTION == "ASIAN/PAC.ISL", "Asian",
+                                        ifelse(nypd_dat$SUSPECT_RACE_DESCRIPTION == "B" | nypd_dat$SUSPECT_RACE_DESCRIPTION == "BLACK", "Black",
+                                               ifelse(nypd_dat$SUSPECT_RACE_DESCRIPTION == "I" | nypd_dat$SUSPECT_RACE_DESCRIPTION == "AMER IND" |
+                                                        nypd_dat$SUSPECT_RACE_DESCRIPTION == "AMERICAN INDIAN/ALASKAN NATIVE", "American Indian",
+                                                      ifelse(nypd_dat$SUSPECT_RACE_DESCRIPTION == "P" | nypd_dat$SUSPECT_RACE_DESCRIPTION == "BLACK HISPANIC", "Black Hispanic",
+                                                             ifelse(nypd_dat$SUSPECT_RACE_DESCRIPTION == "Q" | nypd_dat$SUSPECT_RACE_DESCRIPTION == "WHITE HISPANIC", "White Hispanic",
+                                                                    ifelse(nypd_dat$SUSPECT_RACE_DESCRIPTION == "W" | nypd_dat$SUSPECT_RACE_DESCRIPTION == "WHITE", "White", "Other"))))))
+nypd_dat$SUSPECT_BODY_BUILD_TYPE <- ifelse(nypd_dat$SUSPECT_BODY_BUILD_TYPE == 'H' | nypd_dat$SUSPECT_BODY_BUILD_TYPE == 'HEA', "HEAVY",
+                                       ifelse(nypd_dat$SUSPECT_BODY_BUILD_TYPE == 'M' | nypd_dat$SUSPECT_BODY_BUILD_TYPE == 'U' | nypd_dat$SUSPECT_BODY_BUILD_TYPE == 'MED', "MEDIUM",
+                                              ifelse(nypd_dat$SUSPECT_BODY_BUILD_TYPE == 'T' | nypd_dat$SUSPECT_BODY_BUILD_TYPE == 'THN', "THIN", "Unknown")))
+nypd_dat$OFFICER_EXPLAINED_STOP_FLAG <- ifelse(nypd_dat$OFFICER_EXPLAINED_STOP_FLAG == 'Y', 1,
+                                               ifelse(nypd_dat$OFFICER_EXPLAINED_STOP_FLAG == 'N', 0, NA))
+nypd_dat$OTHER_PERSON_STOPPED_FLAG <- ifelse(nypd_dat$OTHER_PERSON_STOPPED_FLAG == 'Y', 1,
+                                               ifelse(nypd_dat$OTHER_PERSON_STOPPED_FLAG == 'N', 0, NA))
+nypd_dat$SUSPECTS_ACTIONS_DECRIPTION_FLAG <- ifelse(nypd_dat$SUSPECTS_ACTIONS_DECRIPTION_FLAG == 'Y', 1,
+                                             ifelse(nypd_dat$SUSPECTS_ACTIONS_DECRIPTION_FLAG == 'N', 0, NA))
+nypd_dat$STOP_FRISK_TIME1 <- as.numeric(nypd_dat$STOP_FRISK_TIME1)
